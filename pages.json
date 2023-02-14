@@ -1,0 +1,90 @@
+{
+	"easycom": {
+		// uview 组件
+		"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue",
+		// 自定义组件
+		"^cl-(.*)": "@/components/cl-$1/index.vue"
+	},
+
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"name": "index",
+			"aliasPath": "/",
+			"meta": {
+				"title": "首页"
+			},
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/newpage/newpage",
+			"name": "newpage",
+			"aliasPath": "/newpage/:id",
+			"meta": {
+				"title": "测试"
+			},
+			"style": {
+				"navigationBarTitleText": "测试",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/index/zPagingList",
+			"name": "zPagingList",
+			"aliasPath": "/zPagingList",
+			"meta": {
+				"title": "列表"
+			},
+			"style": {
+				"navigationBarTitleText": "列表",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			// query 方式传参
+			"path": "pages/public/richPage/richPage",
+			// params 传参
+			"name": "richPage",
+			"meta": {
+				"title": "富文本页"
+			},
+			"style": {
+				"navigationBarTitleText": "富文本页",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"subPackages": [{
+		"root": "pagesA",
+		"pages": [{
+			"path": "list/list",
+			"name": "pagesAList",
+			"meta": {
+				"title": "pagesA 分包页面"
+			},
+			"style": {
+				"navigationBarTitleText": "pagesA 分包页面",
+				"enablePullDownRefresh": false
+			}
+		}]
+	}, {
+		"root": "pagesB",
+		"pages": [{
+			"path": "detail/detail",
+			"name": "pagesBDetail",
+			"meta": {
+				"title": "pagesB 分包页面"
+			},
+			"style": {
+				"navigationBarTitleText": "pagesB 分包页面",
+				"enablePullDownRefresh": false
+			}
+		}]
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

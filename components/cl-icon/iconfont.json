@@ -1,0 +1,16 @@
+{
+  "id": "2505219",
+  "name": "uniapp 插件市场",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8478792",
+      "name": "喇叭",
+      "font_class": "laba",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

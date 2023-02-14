@@ -1,0 +1,88 @@
+{
+	"name": "uniapp-template",
+	"version": "1.0.0",
+	"description": "-\t组件使用easycom模式 cl-*(可在pages里面修改)",
+	"main": "main.js",
+	"id": "chenmushan-template",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://gitee.com/ChenMuShan/uniapp-template"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"uni-read-pages": "^1.0.5",
+		"uni-simple-router": "^2.0.4"
+	},
+	"uni-app": {
+		"scripts": {
+			"h5-dev": {
+				"title": "H5-开发服",
+				"BROWSER": "Chrome",
+				"env": {
+					"UNI_PLATFORM": "h5",
+					"BASE_API_URL": "http://dev.com"
+				},
+				"define": {
+					"MP-DINGTALK": true
+				}
+			},
+			"h5-test": {
+				"title": "H5-测试服",
+				"BROWSER": "Chrome",
+				"env": {
+					"UNI_PLATFORM": "h5",
+					"BASE_API_URL": "http://test.com"
+				},
+				"define": {
+					"MP-DINGTALK": true
+				}
+			},
+			"h5-pro": {
+				"title": "H5-正式服",
+				"BROWSER": "Chrome",
+				"env": {
+					"UNI_PLATFORM": "h5",
+					"BASE_API_URL": "http://pro.com"
+				},
+				"define": {
+					"MP-DINGTALK": true
+				}
+			},
+			"weixin-dev": {
+				"title": "微信小程序-开发服",
+				"env": {
+					"UNI_PLATFORM": "mp-weixin",
+					"BASE_API_URL": "http://dev.com"
+				},
+				"define": {
+					"MP-DINGTALK": true
+				}
+			},
+			"weixin-test": {
+				"title": "微信小程序-测试服",
+				"env": {
+					"UNI_PLATFORM": "mp-weixin",
+					"BASE_API_URL": "http://test.com"
+				},
+				"define": {
+					"MP-DINGTALK": true
+				}
+			},
+			"weixin-pro": {
+				"title": "微信小程序-正式服",
+				"env": {
+					"UNI_PLATFORM": "mp-weixin",
+					"BASE_API_URL": "http://pro.com"
+				},
+				"define": {
+					"MP-DINGTALK": true
+				}
+			}
+		}
+	}
+}
