@@ -9,7 +9,7 @@ const codeMessage = {
 
 const install = (Vue, vm) => {
 	// 这个配置是一次配置，全局通用的，具体参数见 https://www.uviewui.com/js/http.html
-	uni.$u.http.setConfig((config)=>{
+	uni.$u.http.setConfig((config) => {
 		// 域名设置
 		config.baseURL = projectConfig.baseUrl;
 		// 全局header
@@ -42,7 +42,7 @@ const install = (Vue, vm) => {
 		// #endif
 		// #ifdef APP-PLUS
 		// DNS解析时优先使用ipv4 仅 App-Android 支持 (HBuilderX 2.8.0+)
-		config.firstIpv4 = false; 
+		config.firstIpv4 = false;
 		// #endif
 		// 局部优先级高于全局，返回当前请求的task,options。请勿在此处修改options。非必填
 		// getTask: (task, options) => {
@@ -60,10 +60,10 @@ const install = (Vue, vm) => {
 
 	// 请求拦截部分，如配置，每次请求前都会执行
 	uni.$u.http.interceptors.request.use((config) => {
-		
-		if(config.custom.ShowLoading){
+
+		if (config.custom.ShowLoading) {
 			uni.showLoading({
-			    title: config.custom.LoadingText || '正在加载',
+				title: config.custom.LoadingText || '正在加载',
 				mask: config.custom.LoadingMask || false
 			});
 		}
@@ -93,29 +93,42 @@ const install = (Vue, vm) => {
 	})
 
 	// 响应拦截，如配置，每次请求结束都会执行本方法
-	uni.$u.http.interceptors.response.use((res) => {
-		
-		if(res.config.custom.ShowLoading){
-			uni.hideLoading();
-		}
-		
-		// if 状态码是否正常
-		if (res.statusCode == 200) {
-			let result = res.data;
-			// if 与后台规定的成功码是否正常
-			if (result.code == 200) {
-				return result.result || result.data;
-			} else if (result.code == 300) {
-				vm.$u.toast('未登录!');
-			} else {
-				vm.$u.toast(result.msg);
+	uni.$u.http.interceptors.response.use(
+		(res) => {
+			if (res.config.custom.ShowLoading) {
+				uni.hideLoading();
 			}
-		} else {
-			let errorMessage = codeMessage[res.statusCode] ? codeMessage[res.statusCode] : res.statusCode;
-			vm.$u.toast(errorMessage);
+			// if 状态码是否正常
+			if (res.statusCode == 200) {
+				let result = res.data;
+				// if 与后台规定的成功码是否正常
+				if (result.code == 200) {
+					return result.result || result.data;
+				} else if (result.code == 300) {
+					vm.$u.toast('未登录!');
+				} else {
+					vm.$u.toast(result.msg);
+				}
+			} else {
+				let errorMessage = codeMessage[res.statusCode] ? codeMessage[res.statusCode] : res.statusCode;
+				vm.$u.toast(errorMessage);
+				return Promise.reject(result);//不会返回任何值
+			}
+			return false;
+		},
+		(error) => {
+			if (error.errMsg == 'request:fail') {
+				// 
+				vm.$u.toast(error.errMsg);
+				setTimeout(() => {
+					vm.$Router.replace({
+						name: 'login',
+					});
+				}, 1500);
+			}
+			return false;
 		}
-		return false;
-	});
+	);
 }
 
 export default {
