@@ -7,10 +7,10 @@
 <template>
 	<view :class="{'zp-container':true,'zp-container-fixed':emptyViewFixed}" :style="[finalEmptyViewStyle]" @click="emptyViewClick">
 		<view class="zp-main">
-			<image v-if="!emptyViewImg.length" class="zp-main-image" :style="[emptyViewImgStyle]" :src="emptyImg" />
-			<image v-else class="zp-main-image" mode="aspectFit" :style="[emptyViewImgStyle]" :src="emptyViewImg" />
-			<text class="zp-main-title" :style="[emptyViewTitleStyle]">{{emptyViewText}}</text>
-			<text v-if="showEmptyViewReload" class="zp-main-error-btn" :style="[emptyViewReloadStyle]" @click.stop="reloadClick">{{emptyViewReloadText}}</text>
+			<image v-if="!emptyViewImg.length" :class="{'zp-main-image-rpx':unit==='rpx','zp-main-image-px':unit==='px'}" :style="[emptyViewImgStyle]" :src="emptyImg" />
+			<image v-else :class="{'zp-main-image-rpx':unit==='rpx','zp-main-image-px':unit==='px'}" mode="aspectFit" :style="[emptyViewImgStyle]" :src="emptyViewImg" />
+			<text class="zp-main-title" :class="{'zp-main-title-rpx':unit==='rpx','zp-main-title-px':unit==='px'}" :style="[emptyViewTitleStyle]">{{emptyViewText}}</text>
+			<text v-if="showEmptyViewReload" :class="{'zp-main-error-btn':true,'zp-main-error-btn-rpx':unit==='rpx','zp-main-error-btn-px':unit==='px'}" :style="[emptyViewReloadStyle]" @click.stop="reloadClick">{{emptyViewReloadText}}</text>
 		</view>
 	</view>
 </template>
@@ -25,68 +25,73 @@
 			};
 		},
 		props: {
-			//空数据描述文字
+			// 空数据描述文字
 			emptyViewText: {
 				type: String,
 				default: '没有数据哦~'
 			},
-			//空数据图片
+			// 空数据图片
 			emptyViewImg: {
 				type: String,
 				default: ''
 			},
-			//是否显示空数据图重新加载按钮
+			// 是否显示空数据图重新加载按钮
 			showEmptyViewReload: {
 				type: Boolean,
 				default: false
 			},
-			//空数据点击重新加载文字
+			// 空数据点击重新加载文字
 			emptyViewReloadText: {
 				type: String,
 				default: '重新加载'
 			},
-			//是否是加载失败
+			// 是否是加载失败
 			isLoadFailed: {
 				type: Boolean,
 				default: false
 			},
-			//空数据图样式
+			// 空数据图样式
 			emptyViewStyle: {
 				type: Object,
 				default: function() {
                     return {}
                 }
 			},
-			//空数据图img样式
+			// 空数据图img样式
 			emptyViewImgStyle: {
 				type: Object,
 				default: function() {
 				    return {}
 				}
 			},
-			//空数据图描述文字样式
+			// 空数据图描述文字样式
 			emptyViewTitleStyle: {
 				type: Object,
 				default: function() {
 				    return {}
 				}
 			},
-			//空数据图重新加载按钮样式
+			// 空数据图重新加载按钮样式
 			emptyViewReloadStyle: {
 				type: Object,
 				default: function() {
 				    return {}
 				}
 			},
-			//空数据图z-index
+			// 空数据图z-index
 			emptyViewZIndex: {
 				type: Number,
 				default: 9
 			},
-			//空数据图片是否使用fixed布局并铺满z-paging
+			// 空数据图片是否使用fixed布局并铺满z-paging
 			emptyViewFixed: {
 				type: Boolean,
 				default: true
+			},
+			// 空数据图中布局的单位，默认为rpx
+			unit: {
+				type: String,
+				default: 'rpx'
 			}
 		},
 		computed: {
@@ -99,9 +104,11 @@
 			}
 		},
 		methods: {
+			// 点击了reload按钮
 			reloadClick() {
 				this.$emit('reload');
 			},
+			// 点击了空数据view
 			emptyViewClick() {
 				this.$emit('viewClick');
 			}
@@ -139,24 +146,44 @@
         padding: 50rpx 0rpx;
 	}
 
-	.zp-main-image {
-		width: 200rpx;
-		height: 200rpx;
+	.zp-main-image-rpx {
+		width: 240rpx;
+		height: 240rpx;
+	}
+	.zp-main-image-px {
+		width: 120px;
+		height: 120px;
 	}
 
 	.zp-main-title {
-		font-size: 26rpx;
 		color: #aaaaaa;
 		text-align: center;
+	}
+	.zp-main-title-rpx {
+		font-size: 28rpx;
 		margin-top: 10rpx;
+		padding: 0rpx 20rpx;
+	}
+	.zp-main-title-px {
+		font-size: 14px;
+		margin-top: 5px;
+		padding: 0px 10px;
 	}
 
 	.zp-main-error-btn {
-		font-size: 26rpx;
-		padding: 8rpx 24rpx;
 		border: solid 1px #dddddd;
-		border-radius: 6rpx;
 		color: #aaaaaa;
+	}
+	.zp-main-error-btn-rpx {
+		font-size: 28rpx;
+		padding: 8rpx 24rpx;
+		border-radius: 6rpx;
 		margin-top: 50rpx;
+	}
+	.zp-main-error-btn-px {
+		font-size: 14px;
+		padding: 4px 12px;
+		border-radius: 3px;
+		margin-top: 25px;
 	}
 </style>
