@@ -14,4 +14,5 @@
 
 <style lang="scss">
 	@import "@/uni_modules/uview-ui/index.scss";
+	@import '/static/style/onlylee.scss';
 </style>

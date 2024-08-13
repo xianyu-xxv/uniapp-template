@@ -1,0 +1,1267 @@
+/* 公用样式 */
+.border {
+	border: 2rpx solid #707070;
+	border-radius: 4rpx;
+}
+
+.borderNomal {
+	border: 2rpx solid #707070;
+	border-radius: 14rpx;
+	color: #282828;
+
+	.borderlfet {
+		border-left: 1px solid #000000;
+
+	}
+}
+
+.borderAc {
+	border: 2rpx solid #2F74F6;
+	border-radius: 8rpx;
+	color: #2F74F6;
+
+	.borderlfet {
+		border-left: 1px solid #2F74F6;
+
+	}
+}
+
+.border-4173FE {
+	border: 2rpx solid #4173FE;
+}
+
+.border-F3F3F3 {
+	border: 2rpx solid #F3F3F3;
+}
+
+.border-C7C7C7{
+	border: 2rpx solid #C7C7C7;
+}
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+
+.round {
+	border-radius: 5000upx;
+}
+
+.radius {
+	border-radius: 10upx;
+}
+
+.radius-18 {
+	border-radius: 18upx;
+}
+
+.radius-50 {
+	border-radius: 50upx;
+}
+
+.borderNone {
+	border: none;
+}
+
+// 定位
+.labFixed {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-bottom: 0;
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ==================
+          布局
+ ==================== */
+
+/*  -- flex弹性布局 -- */
+
+.flex {
+	display: flex;
+
+}
+
+.flex-reverse {
+	flex-flow: row-reverse;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.flexRoot {
+	display: flow-root;
+}
+
+.basis-10 {
+	flex-basis: 10%;
+}
+
+.basis-xxs {
+	flex-basis: 15%;
+}
+
+.basis-xs {
+	flex-basis: 20%;
+}
+
+.basis-25 {
+	flex-basis: 25%;
+}
+
+.basis-s {
+	flex-basis: 30%;
+}
+
+.basis-30 {
+	flex-basis: 30%;
+}
+
+.basis-35 {
+	flex-basis: 35%;
+}
+
+.basis-65 {
+	flex-basis: 65%;
+}
+
+.basis-sm {
+	flex-basis: 40%;
+}
+
+.basis-df {
+	flex-basis: 50%;
+}
+
+.basis-lg {
+	flex-basis: 60%;
+}
+
+.basis-70 {
+	flex-basis: 70%;
+}
+
+.basis-75 {
+	flex-basis: 75%;
+}
+
+.basis-xl {
+	flex-basis: 80%;
+}
+
+.basis-xxl {
+	flex-basis: 85%;
+}
+
+.flex-sub {
+	flex: 1;
+}
+
+.flex-twice {
+	flex: 2;
+}
+
+.flex-treble {
+	flex: 3;
+}
+
+.flex4 {
+	flex: 4;
+}
+.flex-five {
+	flex: 5;
+}
+
+.flex-direction {
+	flex-direction: column;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-stretch {
+	align-items: stretch;
+}
+
+.self-start {
+	align-self: flex-start;
+}
+
+.self-center {
+	align-self: flex-center;
+}
+
+.self-end {
+	align-self: flex-end;
+}
+
+.self-stretch {
+	align-self: stretch;
+}
+
+
+
+.justify-start {
+	justify-content: flex-start;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-around {
+	justify-content: space-around;
+}
+
+
+/*  -- 内外边距 -- */
+
+.margin-0 {
+	margin: 0;
+}
+
+.margin-xs {
+	margin: 10upx;
+}
+
+.margin-sm {
+	margin: 20upx;
+}
+
+.margin {
+	margin: 30upx;
+}
+
+.margin-lg {
+	margin: 40upx;
+}
+
+.margin-xl {
+	margin: 50upx;
+}
+
+.margin-top-xs {
+	margin-top: 10upx;
+}
+
+.margin-top-sm {
+	margin-top: 20upx;
+}
+
+.margin-top {
+	margin-top: 30upx;
+}
+
+.margin-top-lg {
+	margin-top: 40upx;
+}
+
+.margin-top-xl {
+	margin-top: 50upx;
+}
+
+.margin-right-xs {
+	margin-right: 10upx;
+}
+
+.margin-right-15 {
+	margin-right: 15upx;
+}
+
+.margin-right-sm {
+	margin-right: 20upx;
+}
+
+.margin-right {
+	margin-right: 30upx;
+}
+
+.margin-right-lg {
+	margin-right: 40upx;
+}
+
+.margin-right-xl {
+	margin-right: 50upx;
+}
+
+.margin-bottom-xs {
+	margin-bottom: 10upx;
+}
+
+.margin-bottom-sm {
+	margin-bottom: 20upx;
+}
+
+.margin-bottom {
+	margin-bottom: 30upx;
+}
+
+.margin-bottom-32 {
+	margin-bottom: 32upx;
+}
+
+.margin-bottom-lg {
+	margin-bottom: 40upx;
+}
+
+.margin-bottom-xl {
+	margin-bottom: 50upx;
+}
+
+.margin-bottom-200 {
+	margin-bottom: 200upx;
+}
+
+.margin-left-xs {
+	margin-left: 10upx;
+}
+
+.margin-left-sm {
+	margin-left: 20upx;
+}
+
+.margin-left-25 {
+	margin-left: 25upx;
+}
+
+.margin-left {
+	margin-left: 30upx;
+}
+
+.margin-left-lg {
+	margin-left: 40upx;
+}
+
+.margin-left-xl {
+	margin-left: 50upx;
+}
+
+.margin-lr-xs {
+	margin-left: 10upx;
+	margin-right: 10upx;
+}
+
+.margin-lr-sm {
+	margin-left: 20upx;
+	margin-right: 20upx;
+}
+
+.margin-lr {
+	margin-left: 30upx;
+	margin-right: 30upx;
+}
+
+.margin-lr-lg {
+	margin-left: 40upx;
+	margin-right: 40upx;
+}
+
+.margin-lr-xl {
+	margin-left: 50upx;
+	margin-right: 50upx;
+}
+
+.margin-tb-xs {
+	margin-top: 10upx;
+	margin-bottom: 10upx;
+}
+
+.margin-tb-sm {
+	margin-top: 20upx;
+	margin-bottom: 20upx;
+}
+
+.margin-tb {
+	margin-top: 30upx;
+	margin-bottom: 30upx;
+}
+
+.margin-tb-lg {
+	margin-top: 40upx;
+	margin-bottom: 40upx;
+}
+
+.margin-tb-xl {
+	margin-top: 50upx;
+	margin-bottom: 50upx;
+}
+
+.padding-xs {
+	padding: 10upx;
+}
+
+.padding-s {
+	padding: 15upx;
+}
+
+.padding-sm {
+	padding: 20upx;
+}
+
+.padding {
+	padding: 30upx;
+}
+
+.padding-lg {
+	padding: 40upx;
+}
+
+.padding-xl {
+	padding: 50upx;
+}
+
+.padding-top-xs {
+	padding-top: 10upx;
+}
+
+.padding-top-sm {
+	padding-top: 20upx;
+}
+
+.padding-top {
+	padding-top: 30upx;
+}
+
+.padding-top-lg {
+	padding-top: 40upx;
+}
+
+.padding-top-xl {
+	padding-top: 50upx;
+}
+
+.padding-right-xs {
+	padding-right: 10upx;
+}
+
+.padding-right-sm {
+	padding-right: 20upx;
+}
+
+.padding-right {
+	padding-right: 30upx;
+}
+
+.padding-right-lg {
+	padding-right: 40upx;
+}
+
+.padding-right-xl {
+	padding-right: 50upx;
+}
+
+.padding-bottom-xs {
+	padding-bottom: 10upx;
+}
+
+.padding-bottom-sm {
+	padding-bottom: 20upx;
+}
+
+.padding-bottom {
+	padding-bottom: 30upx;
+}
+
+.padding-bottom-lg {
+	padding-bottom: 40upx;
+}
+
+.padding-bottom-xl {
+	padding-bottom: 50upx;
+}
+
+.padding-left-xs {
+	padding-left: 10upx;
+}
+
+.padding-left-sm {
+	padding-left: 20upx;
+}
+
+.padding-left {
+	padding-left: 30upx;
+}
+
+.padding-left-lg {
+	padding-left: 40upx;
+}
+
+.padding-left-xl {
+	padding-left: 50upx;
+}
+
+.padding-lr-xs {
+	padding-left: 10upx;
+	padding-right: 10upx;
+}
+
+.padding-lr-sm {
+	padding-left: 20upx;
+	padding-right: 20upx;
+}
+
+.padding-lr {
+	padding-left: 30upx;
+	padding-right: 30upx;
+}
+
+.padding-lr-lg {
+	padding-left: 40upx;
+	padding-right: 40upx;
+}
+
+.padding-lr-xl {
+	padding-left: 50upx;
+	padding-right: 50upx;
+}
+
+.padding-tb-xs {
+	padding-top: 10upx;
+	padding-bottom: 10upx;
+}
+
+.padding-tb-sm {
+	padding-top: 20upx;
+	padding-bottom: 20upx;
+}
+
+.padding-tb {
+	padding-top: 30upx;
+	padding-bottom: 30upx;
+}
+
+.padding-tb-lg {
+	padding-top: 40upx;
+	padding-bottom: 40upx;
+}
+
+.padding-tb-xl {
+	padding-top: 50upx;
+	padding-bottom: 50upx;
+}
+
+
+
+/* ==================
+          文本
+ ==================== */
+.text-decoration {
+	text-decoration: line-through;
+}
+
+.text-xs {
+	font-size: 20upx;
+}
+
+.text-22 {
+	font-size: 22rpx;
+}
+
+.text-ss {
+	font-size: 22upx;
+}
+
+.text-sm {
+	font-size: 24upx;
+}
+
+.text-dfs {
+	font-size: 26upx;
+}
+
+.text-df {
+	font-size: 28upx;
+}
+
+.text-26 {
+	font-size: 26upx;
+}
+
+.text-23 {
+	font-size: 23upx;
+}
+.text-24{
+	font-size: 22rpx;
+}
+.text-30 {
+	font-size: 30upx;
+}
+
+.text-ll {
+	font-size: 30upx;
+}
+
+.text-lg {
+	font-size: 32upx;
+}
+
+.text-xl {
+	font-size: 36upx;
+}
+
+.text-40 {
+	font-size: 40upx;
+}
+
+.text-xxl {
+	font-size: 44upx;
+}
+
+.text-48 {
+	font-size: 48upx;
+}
+.text-64 {
+	font-size: 64upx;
+}
+.text-sl {
+	font-size: 80upx;
+}
+
+.text-xsl {
+	font-size: 120upx;
+}
+
+.text-Abc {
+	text-transform: Capitalize;
+}
+
+.text-ABC {
+	text-transform: Uppercase;
+}
+
+.text-abc {
+	text-transform: Lowercase;
+}
+
+.text-family {
+	font-family: PingFang SC-Bold, PingFang SC;
+}
+
+.text-price::before {
+	content: "¥";
+	font-size: 80%;
+	margin-right: 4upx;
+}
+
+.text-cut {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-content {
+	line-height: 1.6;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-blue,
+.line-blue,
+.lines-blue {
+	color: #0081ff;
+}
+
+/* 背景 */
+.bg-E8E8E8 {
+	background-color: #E8E8E8;
+	color: #000000;
+}
+
+.bg-FFFFFF {
+	background-color: #FFFFFF;
+}
+
+.bg-F6F6F6 {
+	background-color: #F6F6F6;
+}
+
+.bg-FFEBEB {
+	background-color: #FFEBEB;
+}
+
+.bg-FFA292 {
+	background-color: #FFA292;
+}
+.bg-EBF3FF{
+	background-color: #EBF3FF;
+}
+.bg-DCDCDC {
+	background-color: #DCDCDC;
+}
+.bg-F7F9FA {
+	background-color: #F7F9FA;
+}
+
+.bg-1F1E1F {
+	background-color: #1F1E1F;
+}
+
+.bg-F85A45 {
+	background-color: #F85A45;
+	color: #FFFFFF;
+}
+
+.bg-FF573B {
+	background-color: #FF573B;
+}
+
+.bg-2F74F6 {
+	background-color: #2F74F6;
+	color: #FFFFFF;
+}
+
+.bg-00BB13 {
+	background-color: #00BB13;
+	color: #FFFFFF;
+}
+
+.bg-red {
+	background-color: red;
+	color: #000000;
+}
+
+.bg-FFF8EE {
+	background-color: #FFF8EE;
+}
+
+.bg-F2F3F5 {
+	background-color: #F2F3F5;
+}
+
+.bg-333333 {
+	background-color: #333333;
+}
+.bg-56BBB4 {
+	background-color: rgba(86, 187, 180, 0.15);
+}
+
+.bg-666666 {
+	background-color: #666666;
+}
+
+.bg-FF6F00 {
+	background-color: #FF6F00;
+}
+.bg-FF5F2D{
+	background-color: #FF5F2D;
+}
+.bg-FCF2EF {
+	background-color: #FCF2EF;
+}
+.bg-2D72FF{
+	background-color:  #2D72FF;
+}
+.bg-D6D6D6 {
+	background-color: #D6D6D6;
+}
+
+.bg-F8F8F8 {
+	background-color: #F8F8F8;
+}
+
+.bg-FF4747 {
+	background-color: #FF4747;
+}
+
+.bg-2F74F6 {
+	background-color: #2F74F6;
+}
+
+.bg-ECF1FF {
+	background-color: #ECF1FF;
+}
+
+.bg-f5f5f5 {
+	background-color: #f5f5f5;
+}
+
+.bg-4173FE {
+	background-color: #4173FE;
+}
+.bg-FBFBFB{
+	background-color: #FBFBFB;
+}
+.bg-017eff {
+	background-color: #017eff;
+}
+
+.bg-F9F9F9 {
+	background-color: #F9F9F9;
+}
+.bg-FFF2F2{
+	background-color: #FFF2F2;
+}
+.bg-FFF6E9{
+	background-color: #FFF6E9;
+}
+.bg-E6F0FF{
+	background-color: #E6F0FF;
+}
+.text-D6D6D6 {
+	color: #D6D6D6;
+}
+
+.text-707070 {
+	color: #707070;
+}
+.text-DE8603 {
+	color: #DE8603;
+}
+
+.text-F2F3F5 {
+	color: #F2F3F5;
+}
+
+.text-606266 {
+	color: #606266;
+}
+
+.text-666666 {
+	color: #666666;
+}
+
+.text-2E2E2E {
+	color: #2E2E2E;
+}
+
+.text-B1B1B1 {
+	color: #B1B1B1;
+}
+
+.text-FF9100 {
+	color: #FF9100;
+}
+
+.text-989898 {
+	color: #989898;
+}
+.text-DEDEDE{
+	color: #DEDEDE;
+}
+.text-2F74F6 {
+	color: #2F74F6;
+}
+.text-0A1E1D{
+	color: #0A1E1D;
+}
+.text-596161{
+	color: #596161;
+}
+.text-76878B{
+	color: #76878B;
+}
+.text-56BBB4{
+	color: #56BBB4;
+}
+.text-718382{
+	color: #718382;
+}
+.text-606E6D{
+	color: #606E6D;
+}
+
+
+.text-4173FE{
+	color: #4173FE;
+}
+.text-6F8ADE {
+	color: #6F8ADE;
+}
+
+.text-FFFFFF {
+	color: #FFFFFF;
+}
+
+.text-FF7422 {
+	color: #FF7422;
+}
+
+.text-FF4747 {
+	color: #FF4747;
+}
+
+.text-F14539 {
+	color: #F14539;
+}
+
+.text-282828 {
+	color: #282828;
+}
+
+.text-F85A45 {
+	color: #F85A45;
+}
+
+.text-000000 {
+	color: #000000;
+}
+
+.text-06B800 {
+	color: #06B800;
+}
+
+.text-06B800 {
+	color: #06B800;
+}
+
+.text-185B7E {
+	color: #185B7E;
+}
+
+.text-FF6F00 {
+	color: #FF6F00;
+}
+.text-AFAFAF{
+	color: #AFAFAF;
+}
+.text-333333 {
+	color: #333333;
+}
+.text-333636 {
+	color: #333636;
+}
+.text-4A4D5A {
+	color:#4A4D5A;
+}
+
+.text-201A18 {
+	color: #201A18;
+}
+
+.text-666666 {
+	color: #666666;
+}
+
+.text-7E8E8D {
+	color: #7E8E8D;
+}
+
+.text-888 {
+	color: #888;
+}
+
+.text-999999 {
+	color: #999999;
+}
+
+.text-EE0000 {
+	color: #EE0000;
+}
+
+.text-282828 {
+	color: #282828;
+}
+.text-B7B7B7{
+	color: #B7B7B7;
+}
+.text-2F6DF4{
+	color: #2F6DF4;
+}
+
+
+.text-909399 {
+	color: #909399;
+}
+
+.text-ff9000 {
+	color: #ff9000;
+}
+
+.text-303133 {
+	color: #303133;
+}
+
+.text-D62609 {
+	color: #D62609;
+}
+
+.text-1A70F1 {
+	color: #1A70F1;
+}
+
+.text-F13333 {
+	color: #F13333;
+}
+
+.text-EF9B1E {
+	color: #EF9B1E;
+}
+
+// 
+.width-100 {
+	width: 100%;
+}
+
+.width-90 {
+	width: 90%;
+}
+
+.width-80 {
+	width: 80%;
+}
+
+.width-85 {
+	width: 85%;
+}
+
+.width-75 {
+	width: 75%;
+}
+
+.width-20 {
+	width: 20%;
+}
+
+.width-50 {
+	width: 50%;
+}
+
+.width-65 {
+	width: 65%;
+}
+
+.width-25 {
+	width: 25%;
+}
+
+.width-30 {
+	width: 30%;
+}
+
+.width-35 {
+	width: 35%;
+}
+
+.width-40 {
+	width: 40%;
+}
+
+.width-45 {
+	width: 45%;
+}
+.width-50 {
+	width: 50%;
+}
+.height-100 {
+	height: 100%;
+}
+
+.height-60 {
+	height: 60%;
+}
+
+// 
+.border-bottom {
+	border-bottom: 2rpx dashed #000;
+}
+
+// left right top bottom 
+// l r t b
+// lr tb 
+// lt lb rt rb
+// dotted solid double dashed
+// do sd db da
+// 点状 实线 双线 虚线
+.border-EE0000 {
+	border: 2rpx solid #EE0000;
+	border-radius: 0px 18rpx 0px 18rpx;
+	padding: 5rpx;
+	font-size: 22rpx;
+}
+
+.border-e7e7e7 {
+	border: 2rpx solid #e7e7e7;
+}
+
+.border-bottom-e7e7e7 {
+	border-bottom: 2rpx solid #e7e7e7;
+}
+
+.border-999999 {
+	border: 2rpx solid #999999;
+}
+
+.border-bottom-E5E5E5 {
+	border-bottom: 2rpx solid #E5E5E5;
+}
+
+.border-D6D6D6 {
+	border: 2rpx solid #D6D6D6;
+}
+
+.border-bottom-D6D6D6 {
+	border-bottom: 2rpx solid #D6D6D6;
+}
+
+.border-b-D6D6D6 {
+	border-bottom: 2rpx solid #D6D6D6;
+}
+
+.border-bottom-F6F6F6 {
+	border-bottom: 2rpx solid #F6F6F6;
+}
+
+.border-b-F6F6F6 {
+	border-bottom: 2rpx solid #F6F6F6;
+}
+
+.border-b-F2F3F5 {
+	border-bottom: 2rpx solid #F2F3F5;
+}
+
+.border-bottom-707070 {
+	border-bottom: 2rpx solid #707070;
+}
+
+.border-b-707070 {
+	border-bottom: 2rpx solid #707070;
+}
+
+.border-top-D6D6D6 {
+	border-top: 2rpx solid #D6D6D6;
+}
+
+.border-top-E2E2E2 {
+	border-top: 2rpx solid #E2E2E2;
+}
+
+.border-t-D6D6D6 {
+	border-top: 2rpx solid #D6D6D6;
+}
+
+.border-t-F2F3F5 {
+	border-top: 2rpx solid #F2F3F5;
+}
+
+.border-top-dashed-D6D6D6 {
+	border-top: 2rpx dashed #D6D6D6;
+}
+
+.border-t-da-D6D6D6 {
+	border-top: 2rpx dashed #D6D6D6;
+}
+
+.border-b-E2E2E2 {
+	border-bottom: 2rpx solid #E2E2E2;
+}
+
+.border-bottom-E2E2E2 {
+	border-bottom: 2rpx solid #E2E2E2;
+}
+
+
+// 
+.opacity {
+	opacity: 1;
+}
+
+.opacity-2 {
+	opacity: .2;
+}
+
+// 
+.radius-left-xs {
+	border-radius: 10rpx 0 0 14rpx;
+}
+
+.radius-20 {
+	border-radius: 20rpx;
+}
+
+.radius-15 {
+	border-radius: 15rpx;
+}
+
+.radius-10 {
+	border-radius: 10rpx;
+}
+
+.radius-5 {
+	border-radius: 5rpx;
+}
+
+// 
+
+.text-indent-xs {
+	text-indent: 10upx;
+}
+
+.text-indent-sm {
+	text-indent: 20upx;
+}
+
+.text-indent-df {
+	text-indent: 30upx;
+}
+
+.text-indent-lg {
+	text-indent: 40upx;
+}
+
+.text-indent-xl {
+	text-indent: 50upx;
+}
+
+.bottom-1 {
+	bottom: 1%;
+}
+
+.bottom-10 {
+	bottom: 10%;
+}
+
+.safe-area-inset-bottom {
+	padding-bottom: 0;
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+.white-nowrap {
+	white-space: nowrap;
+}
